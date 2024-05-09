@@ -1,6 +1,8 @@
 
 import React from 'react';
 import useAuth from '../../Custom Hooks/useAuth';
+import axios from 'axios';
+import { toast } from 'react-toastify';
 
 const ServiceAdd = () => {
     const {user}=useAuth()
@@ -19,7 +21,14 @@ const ServiceAdd = () => {
         const providerImage=user?.photoURL
         const providerName=user?.displayName
         const addService={serviceName,emailAddress,serviceArea,Price,imgURL,description,providerEmail,providerImage,providerName}
-        console.log(addService)
+        
+        axios.post('http://localhost:5000/servics',addService)
+        .then(res=>{
+            console.log(res.data)
+            if(res.data.acknowledged){
+                toast.success('Your Data successfully Add')
+            }
+        })
 
     }
     return (
