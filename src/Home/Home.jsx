@@ -3,6 +3,7 @@ import Banner from './Banner/Banner';
 import Services from './Services Data/Services';
 import CouseUS from './Couse US/CouseUS';
 import Banifit from './Banifits/Banifit';
+import Team from './Our Team/Team';
 
 const Home = () => {
     return (
@@ -11,6 +12,7 @@ const Home = () => {
           <Services></Services>
           <CouseUS></CouseUS>
           <Banifit></Banifit>
+          <Team></Team>
         </div>
     );
 };

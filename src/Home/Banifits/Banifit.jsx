@@ -6,7 +6,7 @@ const Banifit = () => {
        <div>
         <h1 className='text-4xl font-semibold text-center'>Benefits</h1>
        </div>
-       <div className="hero min-h-screen  bg-[#707845]">
+       <div className="hero min-h-screen  bg-[#707845] rounded-md">
   <div className="hero-content flex-col lg:flex-row">
    <div className='w-1/2'>
    <img src="https://i.ibb.co/pK4G3c8/petersime-electronic-repairs.png" className=" rounded-lg shadow-2xl" />
