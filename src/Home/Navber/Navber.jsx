@@ -16,8 +16,8 @@ const Navber = () => {
       <li>
       <details>
           <summary>Dashboard</summary>
-          <ul class="p-2">
-            <li><Link>Add Service</Link></li>
+          <ul class="p-2 z-[1]">
+            <li><Link to='/add_service'>Add Service</Link></li>
             <li><Link>Manage Service</Link></li>
             <li><Link>Booked-Services</Link></li>
             <li><Link>Service-To-Do</Link></li>

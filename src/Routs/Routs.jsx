@@ -3,6 +3,7 @@ import Root from "../Lay out/Root";
 import Login from "../Pages/Login";
 import Home from "../Home/Home";
 import Regester from "../Pages/Regester";
+import ServiceAdd from "../Pages/Service Add/ServiceAdd";
   const router = createBrowserRouter([
     {
       path: "/",
@@ -20,6 +21,10 @@ import Regester from "../Pages/Regester";
         {
             path:'/singup',
             element:<Regester></Regester>
+        },
+        {
+            path:'/add_service',
+            element:<ServiceAdd></ServiceAdd>
         },
       ])
 
