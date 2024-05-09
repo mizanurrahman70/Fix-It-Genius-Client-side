@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ServiceCard = ({services}) => {
     console.log(services)
@@ -19,10 +20,10 @@ const ServiceCard = ({services}) => {
     </div>
     <div className="card-actions justify-around">
         <p>Price : <span>{Price}</span></p>
-      <button className="btn btn-primary">View Detail</button>
+      <button  className="btn btn-primary"><Link to={`/services/${services?._id}`}>View Detail</Link></button>
     </div>
   </div>
-</div>
+       </div>
 
         </>
     );
