@@ -4,8 +4,9 @@ const ServiceCard = ({services}) => {
     console.log(services)
     const{serviceName,emailAddress,serviceArea,Price,imgURL,description,providerEmail,providerImage,providerName}=services
 
-    console.log(serviceName)
+  
     return (
+        <>
         <div className="card card-compact w-96 bg-base-100 shadow-xl">
   <figure><img src={imgURL} alt="Shoes" /></figure>
   <div className="card-body">
@@ -18,10 +19,12 @@ const ServiceCard = ({services}) => {
     </div>
     <div className="card-actions justify-around">
         <p>Price : <span>{Price}</span></p>
-      <button className="btn btn-primary">Buy Now</button>
+      <button className="btn btn-primary">View Detail</button>
     </div>
   </div>
 </div>
+
+        </>
     );
 };
 
