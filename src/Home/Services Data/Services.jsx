@@ -40,8 +40,8 @@ const Services = () => {
           )
         )}
       </div>
-      <div className=''>
-    <button className='btn btn-success'><Link to='/all_services'>Show All</Link></button>
+      <div className='mt-10 mb-10'>
+    <button className='btn bg-[#1DD100] w-32 btn-success'><Link to='/all_services'>Show All</Link></button>
     </div>
       </>
     );

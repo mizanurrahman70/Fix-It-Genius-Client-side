@@ -15,14 +15,14 @@ const ServiceDtls = () => {
             Deadline: 12/08/2024
           </span>
           <span className='px-4 py-1 text-xs text-blue-800 uppercase bg-blue-200 rounded-full '>
-            Web Development
+           Repair Services
           </span>
         </div>
 
         <div>
          
 
-          <img src={imgURL} className='h-40 w-2/3 mx-auto' alt="" />
+          <img src={imgURL} className='h-40 w-2/3 mx-auto rounded-2xl mt-5' alt="" />
           <h1 className='mt-2 text-3xl font-semibold text-gray-800 '>
          {serviceName}
           </h1>
@@ -32,30 +32,30 @@ const ServiceDtls = () => {
           <p className='mt-6 text-sm font-bold text-gray-600 '>
             Buyer Details:
           </p>
-          <div className='flex items-center gap-5 text-center'>
+          <div className=' text-center'>
             <div>
-              <p className='mt-2 text-sm  text-gray-600 '><span>Name</span>: {providerName}</p>
+              <p className='mt-2 text-sm  text-gray-600 '><span className='text-xl font-semibold'>Name</span>: {providerName}</p>
               <p className='mt-2 text-sm  text-gray-600 '>
-             Location : <span>{serviceArea}</span>
+             <span className='text-xl font-semibold'>Loaction :</span><span>{serviceArea}</span>
               </p>
             </div>
-            <div className='rounded-full object-cover overflow-hidden w-14 h-14'>
+            {/* <div className='rounded-full object-cover overflow-hidden w-14 h-14'>
               <img src='' alt='' />
-            </div>
+            </div> */}
           </div>
-          <p className='mt-6 text-lg font-bold text-gray-600 '>
+          <p className='mt-2 text-lg font-bold text-gray-600 '>
             <span>Price :</span>{Price}
           </p>
-          <button ><Link to={`/submition/${_id}`}>Buy Now</Link></button>
+          <button className='btn btn-primary w-full'><Link to={`/submition/${_id}`}>Percusses</Link></button>
         </div>
       </div>
       {/* Place A Bid Form */}
       <section className='p-6 w-full  bg-white rounded-md shadow-md flex-1 md:min-h-[350px]'>
         <h2 className='text-lg font-semibold text-gray-700 capitalize '>
-          Place A Bid
+      Job Provider
         </h2>
 
-        <div className="max-w-md p-8 sm:flex sm:space-x-6 bg-gray-900 text-gray-100">
+        <div className="max-w-full p-8 sm:flex sm:space-x-6 bg-[#3d434a] text-gray-100">
 	<div className="flex-shrink-0 w-full mb-6 h-44 sm:h-32 sm:w-32 sm:mb-0">
 		<img src={providerImage} alt="" className="object-cover object-center w-full h-full rounded bg-gray-500" />
 	</div>

@@ -60,15 +60,14 @@ useEffect(()=>{
     })
     .then(() => {
         <ToastContainer />
-    //    alert(("Profile updated successfully"))
+   
     toast.success("Profile updated successfully")
     
-        // You can add any additional actions upon successful profile update
-        // For example, dispatch an event, update UI, etc.
+       
     })
     .catch((error) => {
         console.error('Error updating profile:', error);
-        throw error; // Rethrow the error to propagate it to the caller
+        throw error; 
     });
 };
 

@@ -5,6 +5,7 @@ const Banifit = () => {
        <>
        <div>
         <h1 className='text-4xl font-semibold text-center'>Benefits</h1>
+        <p className='text-center mt-2 mb-5'>Choosing the right electronic repair service can make a significant difference in the <br /> longevity  performance of your devices</p>
        </div>
        <div className="hero min-h-screen  bg-[#707845] rounded-md">
   <div className="hero-content flex-col lg:flex-row">

@@ -7,7 +7,7 @@ import Team from './Our Team/Team';
 
 const Home = () => {
     return (
-        <div>
+        <div className='space-y-5'>
           <Banner></Banner>
           <Services></Services>
           <CouseUS></CouseUS>

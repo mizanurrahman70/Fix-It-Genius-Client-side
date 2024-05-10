@@ -5,6 +5,7 @@ const CouseUS = () => {
     <div>
       <div className="mt-5 mb-5">
         <h1 className="text-4xl font-semibold text-center">Why Choose Us?</h1>
+        <p className="text-center mt-5 mb-5"> Look no further! We offer top-notch electronic item repair <br /> services that are fast. Here's why you should <br /> choose us for all your electronic repair needs</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
