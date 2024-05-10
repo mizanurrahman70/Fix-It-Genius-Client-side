@@ -12,7 +12,7 @@ const ServiceAdd = () => {
         e.preventDefault()
         const form=e.target 
         const serviceName=form.serviceName.value 
-        const emailAddress=form.emailAddress.value 
+        // const emailAddress=form.emailAddress.value 
         const serviceArea=form.serviceArea.value 
         const Price=form.Price.value
         const imgURL=form.imgURL.value
@@ -20,7 +20,7 @@ const ServiceAdd = () => {
         const providerEmail=user?.email
         const providerImage=user?.photoURL
         const providerName=user?.displayName
-        const addService={serviceName,emailAddress,serviceArea,Price,imgURL,description,providerEmail,providerImage,providerName}
+        const addService={serviceName,serviceArea,Price,imgURL,description,providerEmail,providerImage,providerName}
         
         axios.post('http://localhost:5000/servics',addService)
         .then(res=>{
@@ -52,7 +52,7 @@ const ServiceAdd = () => {
                 />
               </div>
   
-              <div>
+              {/* <div>
                 <label className='text-gray-700 ' htmlFor='emailAddress'>
                   Email Address
                 </label>
@@ -60,10 +60,10 @@ const ServiceAdd = () => {
                   id='emailAddress'
                   type='email'
                   name='email'
-                  
+                  disabled
                   className='block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring'
                 />
-              </div>
+              </div> */}
               <div className='flex flex-col gap-2 '>
                 <label className='text-gray-700'>Service Area</label>
                 <input type="text" name='serviceArea' className='block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring' />
