@@ -1,9 +1,10 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 
 const ServiceDtls = () => {
     const loaderData=useLoaderData()
-    const{serviceName,emailAddress,serviceArea,Price,imgURL,description,providerEmail,providerImage,providerName}=loaderData
+
+    const{serviceName,emailAddress,serviceArea,Price,imgURL,description,providerEmail,providerImage,providerName,_id}=loaderData
     console.log(loaderData)
     return (
         <div className='flex flex-col md:flex-row justify-around gap-5  items-center min-h-[calc(100vh-306px)] md:max-w-screen-xl mx-auto '>
@@ -45,6 +46,7 @@ const ServiceDtls = () => {
           <p className='mt-6 text-lg font-bold text-gray-600 '>
             <span>Price :</span>{Price}
           </p>
+          <button ><Link to={`/submition/${_id}`}>Buy Now</Link></button>
         </div>
       </div>
       {/* Place A Bid Form */}
@@ -75,6 +77,7 @@ const ServiceDtls = () => {
 				</svg>
 				<span className="text-gray-400">+25 381 77 983</span>
 			</span>
+      
 		</div>
 	</div>
 </div>

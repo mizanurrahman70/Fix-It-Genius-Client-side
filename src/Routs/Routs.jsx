@@ -6,6 +6,7 @@ import Regester from "../Pages/Regester";
 import ServiceAdd from "../Pages/Service Add/ServiceAdd";
 import ServiceDtls from "../Home/Services Data/ServiceDtls";
 import AllServices from "../Home/Services Data/AllServices";
+import Submiton from "../Pages/Submiton/Submiton";
   const router = createBrowserRouter([
     {
       path: "/",
@@ -38,6 +39,13 @@ import AllServices from "../Home/Services Data/AllServices";
             path:'/all_services',
             element:<AllServices></AllServices>,
             loader:()=>fetch(`http://localhost:5000/services`)
+            
+        },
+        {
+            path:'/submition/:id',
+            element:<Submiton></Submiton>,
+            loader:({params})=>fetch(`http://localhost:5000/services/${params.id}`)
+            
             
         },
       ])
