@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import ServiceCard from './ServiceCard';
+import { Link } from 'react-router-dom';
 
 const Services = () => {
     const[services,setServices]=useState()
@@ -26,7 +27,7 @@ const Services = () => {
       }, []);
     return (
         <>
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-5 max-auto'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-auto'>
         {loader ? (
          <div className="w-16 mx-auto mt-10 bt-10 h-16 border-4 border-dashed rounded-full animate-spin dark:border-violet-600"></div>
         ) : (
@@ -40,7 +41,7 @@ const Services = () => {
         )}
       </div>
       <div className=''>
-    <button className='btn btn-success'>Show All</button>
+    <button className='btn btn-success'><Link to='/all_services'>Show All</Link></button>
     </div>
       </>
     );

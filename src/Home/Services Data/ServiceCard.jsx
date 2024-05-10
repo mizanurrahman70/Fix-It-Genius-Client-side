@@ -9,7 +9,7 @@ const ServiceCard = ({services}) => {
     return (
         <>
         <div className="card card-compact w-96 bg-base-100 shadow-xl">
-  <figure><img src={imgURL} alt="Shoes" /></figure>
+  <figure><img src={imgURL} alt="Shoes"  className='h-52'/></figure>
   <div className="card-body">
     <h2 className="card-title">Service Name : <span>{serviceName}</span></h2>
     <p>Description : <span>{description}</span></p>
