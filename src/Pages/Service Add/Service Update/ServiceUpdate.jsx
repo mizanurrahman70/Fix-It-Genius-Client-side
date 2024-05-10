@@ -1,11 +1,13 @@
 
+import axios from 'axios';
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const ServiceUpdate = () => {
     const loaderData=useLoaderData()
     console.log(loaderData)
-   const {serviceName,serviceArea,Price,imgURL,description,providerEmail,providerImage,providerName}=loaderData
+   const {serviceName,serviceArea,Price,imgURL,description,providerEmail,providerImage,providerName,_id}=loaderData
     const submitHandle=(e)=>{
         e.preventDefault()
         const form=e.target 
@@ -15,10 +17,21 @@ const ServiceUpdate = () => {
         const Price=form.Price.value
         const imgURL=form.imgURL.value
         const description=form.description.value
-        const providerEmail=user?.email
-        const providerImage=user?.photoURL
-        const providerName=user?.displayName
-        const addService={serviceName,serviceArea,Price,imgURL,description,providerEmail,providerImage,providerName}
+        
+        const addService={serviceName,serviceArea,Price,imgURL,description}
+        axios.put(`http://localhost:5000/update/${_id}`,addService)
+        .then(res=>{
+          if(res.data.modifiedCount > 0){
+            
+            Swal.fire({
+              position: "top-center",
+              icon: "success",
+              title: "Successfully Updated",
+              showConfirmButton: false,
+              timer: 1500
+            });
+          }
+        })
         
         
 

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const ManageRow = ({manageRow,deleteHandle}) => {
    
-    const{serviceName,price,providerImage,providerName,_id,serviceId}=manageRow
+    const{serviceName,Price,providerImage,providerName,_id,serviceId}=manageRow
     
    
     return (
@@ -49,7 +49,7 @@ const ManageRow = ({manageRow,deleteHandle}) => {
               
               </span>
             </td>
-            <td>{price}</td>
+            <td>{Price}<span>$</span></td>
             <th>
               <button className="btn btn-ghost btn-xs"><Link to={`/Update_service/${_id}`}>Update</Link></button>
             </th>
