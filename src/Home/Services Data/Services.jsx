@@ -15,7 +15,7 @@ const Services = () => {
         const fetchData = async () => {
           try {
             const response = await axios.get('http://localhost:5000/services');
-            setServices(response.data);
+            setServices(response.data.slice(0,6));
             SetLoader(false);
           } catch (error) {
             console.error('Error fetching data:', error);
