@@ -1,14 +1,13 @@
 import React from 'react';
 
-const ManageRow = ({manageRow}) => {
-    console.log(manageRow)
-    const{serviceName,
-        price,providerImage,providerName,_id}=manageRow
+const ManageRow = ({manageRow,deleteHandle}) => {
+   
+    const{serviceName,price,providerImage,providerName,_id}=manageRow
    
     return (
         <tr>
             <th>
-              <button className="btn btn-circle btn-outline">
+              <button onClick={()=>deleteHandle(_id)} className="btn btn-circle btn-outline">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-6 w-6"
