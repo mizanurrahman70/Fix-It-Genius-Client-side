@@ -8,6 +8,7 @@ import ServiceDtls from "../Home/Services Data/ServiceDtls";
 import AllServices from "../Home/Services Data/AllServices";
 import Submiton from "../Pages/Submiton/Submiton";
 import Manage from "../Pages/Mannage service/Manage";
+import ServiceUpdate from "../Pages/Service Add/Service Update/ServiceUpdate";
   const router = createBrowserRouter([
     {
       path: "/",
@@ -52,10 +53,12 @@ import Manage from "../Pages/Mannage service/Manage";
         {
             path:'/manage_service',
             element:<Manage></Manage>,
-            
-            
-            
-        },
+          },
+        {
+            path:'/Update_service/:id',
+            element:<ServiceUpdate></ServiceUpdate>,
+            loader:({params})=>fetch(`http://localhost:5000/services/${params.id}`)
+          },
       ])
 
     },

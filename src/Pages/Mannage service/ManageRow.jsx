@@ -1,8 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ManageRow = ({manageRow,deleteHandle}) => {
    
-    const{serviceName,price,providerImage,providerName,_id}=manageRow
+    const{serviceName,price,providerImage,providerName,_id,serviceId}=manageRow
+    
    
     return (
         <tr>
@@ -49,7 +51,7 @@ const ManageRow = ({manageRow,deleteHandle}) => {
             </td>
             <td>{price}</td>
             <th>
-              <button className="btn btn-ghost btn-xs">details</button>
+              <button className="btn btn-ghost btn-xs"><Link to={`/Update_service/${_id}`}>Update</Link></button>
             </th>
           </tr>
     );
