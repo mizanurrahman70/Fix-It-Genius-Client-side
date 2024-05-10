@@ -54,7 +54,7 @@ const Manage = () => {
       }
       data()
     },[email])
-    console.log(manageData)
+   
   return (
     <div className="overflow-x-auto">
       <table className="table">

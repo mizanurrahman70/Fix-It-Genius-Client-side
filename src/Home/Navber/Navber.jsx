@@ -4,7 +4,7 @@ import { AuthContext } from '../../Authintication/AuthProvider';
 
 const Navber = () => {
     const { user, logOut } = useContext(AuthContext);
-    console.log(user)
+
     const logOutHandle = () => {
         logOut()
           .then((result) => console.log(result))
@@ -19,7 +19,7 @@ const Navber = () => {
           <ul class="p-2 z-[1]">
             <li><Link to='/add_service'>Add Service</Link></li>
             <li><Link to='/manage_service'>Manage Service</Link></li>
-            <li><Link>Booked-Services</Link></li>
+            <li><Link to='/booked_serviced'>Booked-Services</Link></li>
             <li><Link>Service-To-Do</Link></li>
            
           </ul>

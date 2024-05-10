@@ -9,6 +9,7 @@ import AllServices from "../Home/Services Data/AllServices";
 import Submiton from "../Pages/Submiton/Submiton";
 import Manage from "../Pages/Mannage service/Manage";
 import ServiceUpdate from "../Pages/Service Add/Service Update/ServiceUpdate";
+import BookedService from "../Pages/Booked Service/BookedService";
   const router = createBrowserRouter([
     {
       path: "/",
@@ -58,6 +59,11 @@ import ServiceUpdate from "../Pages/Service Add/Service Update/ServiceUpdate";
             path:'/Update_service/:id',
             element:<ServiceUpdate></ServiceUpdate>,
             loader:({params})=>fetch(`http://localhost:5000/services/${params.id}`)
+          },
+        {
+            path:'/booked_serviced',
+            element:<BookedService></BookedService>,
+           
           },
       ])
 

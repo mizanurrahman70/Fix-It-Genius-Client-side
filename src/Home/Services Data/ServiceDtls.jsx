@@ -5,7 +5,7 @@ const ServiceDtls = () => {
     const loaderData=useLoaderData()
 
     const{serviceName,emailAddress,serviceArea,Price,imgURL,description,providerEmail,providerImage,providerName,_id}=loaderData
-    console.log(loaderData)
+   
     return (
         <div className='flex flex-col md:flex-row justify-around gap-5  items-center min-h-[calc(100vh-306px)] md:max-w-screen-xl mx-auto '>
       {/* Job Details */}
