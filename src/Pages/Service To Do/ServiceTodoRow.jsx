@@ -17,7 +17,7 @@ const ServiceTodoRow = ({ todo, updateState }) => {
   
 
   return (
-    <tr>
+    <tr className="">
       <th>{serviceId}</th>
       <td>
         <div className="flex items-center gap-3">

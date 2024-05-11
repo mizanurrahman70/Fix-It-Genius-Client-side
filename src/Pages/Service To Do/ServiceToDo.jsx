@@ -4,6 +4,7 @@ import useAuth from '../../Custom Hooks/useAuth';
 import axios from 'axios';
 import ServiceTodoRow from './ServiceTodoRow';
 import Swal from 'sweetalert2';
+import nodata from '../../assets/logo/nodata.jpg'
 
 
 const ServiceToDo = () => {
@@ -49,7 +50,7 @@ const ServiceToDo = () => {
   }
    
     return (
-        <div className="">
+        <div className="overflow-x-auto overflow-y-auto mb-10">
        <Helmet>
         <title>Service To Do</title>
       </Helmet>

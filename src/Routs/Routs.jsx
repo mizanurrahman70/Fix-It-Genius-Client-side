@@ -11,6 +11,7 @@ import Manage from "../Pages/Mannage service/Manage";
 import ServiceUpdate from "../Pages/Service Add/Service Update/ServiceUpdate";
 import BookedService from "../Pages/Booked Service/BookedService";
 import ServiceToDo from "../Pages/Service To Do/ServiceToDo";
+import PrivetRout from "../Authintication/PrivetRoute";
   const router = createBrowserRouter([
     {
       path: "/",
@@ -31,11 +32,11 @@ import ServiceToDo from "../Pages/Service To Do/ServiceToDo";
         },
         {
             path:'/add_service',
-            element:<ServiceAdd></ServiceAdd>
+            element:<PrivetRout><ServiceAdd></ServiceAdd></PrivetRout>
         },
         {
             path:'/services/:id',
-            element:<ServiceDtls></ServiceDtls>,
+            element:<PrivetRout><ServiceDtls></ServiceDtls></PrivetRout>,
             loader:({params})=>fetch(`http://localhost:5000/services/${params.id}`)
             
         },
@@ -47,28 +48,28 @@ import ServiceToDo from "../Pages/Service To Do/ServiceToDo";
         },
         {
             path:'/submition/:id',
-            element:<Submiton></Submiton>,
+            element:<PrivetRout><Submiton></Submiton></PrivetRout>,
             loader:({params})=>fetch(`http://localhost:5000/services/${params.id}`)
             
             
         },
         {
             path:'/manage_service',
-            element:<Manage></Manage>,
+            element:<PrivetRout><Manage></Manage></PrivetRout>,
           },
         {
             path:'/Update_service/:id',
-            element:<ServiceUpdate></ServiceUpdate>,
+            element:<PrivetRout><ServiceUpdate></ServiceUpdate></PrivetRout>,
             loader:({params})=>fetch(`http://localhost:5000/services/${params.id}`)
           },
         {
             path:'/booked_serviced',
-            element:<BookedService></BookedService>,
+            element:<PrivetRout><BookedService></BookedService></PrivetRout>,
            
           },
         {
             path:'/service_to_do',
-            element:<ServiceToDo></ServiceToDo>,
+            element:<PrivetRout><ServiceToDo></ServiceToDo></PrivetRout>,
            
           },
       ])
