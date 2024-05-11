@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import useAuth from '../../Custom Hooks/useAuth';
 import axios from 'axios';
 import BookedRow from './BookedRow';
+import { Helmet } from 'react-helmet-async';
 
 const BookedService = () => {
     const {user}=useAuth()
@@ -18,6 +19,9 @@ const BookedService = () => {
      
     return (
         <div className="overflow-x-auto">
+           <Helmet>
+        <title>Booked Service</title>
+      </Helmet>
         <table className="table">
           {/* head */}
           <thead>

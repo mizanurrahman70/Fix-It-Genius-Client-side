@@ -3,6 +3,7 @@ import React from 'react';
 import useAuth from '../../Custom Hooks/useAuth';
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import { Helmet } from 'react-helmet-async';
 
 const ServiceAdd = () => {
     const {user}=useAuth()
@@ -33,6 +34,9 @@ const ServiceAdd = () => {
     }
     return (
         <div className='flex justify-center items-center min-h-[calc(100vh-306px)] my-12'>
+           <Helmet>
+        <title>Add Service</title>
+      </Helmet>
         <section className=' p-2 md:p-6 mx-auto bg-white rounded-md shadow-md '>
           <h2 className='text-lg font-semibold text-gray-700 capitalize '>
             Post a Job
@@ -48,6 +52,7 @@ const ServiceAdd = () => {
                   id='job_title'
                   name='serviceName'
                   type='text'
+                  required
                   className='block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring'
                 />
               </div>
@@ -66,7 +71,7 @@ const ServiceAdd = () => {
               </div> */}
               <div className='flex flex-col gap-2 '>
                 <label className='text-gray-700'>Service Area</label>
-                <input type="text" name='serviceArea' className='block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring' />
+                <input type="text" name='serviceArea' required className='block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring' />
   
                 {/* Date Picker Input Field */}
               </div>
@@ -80,6 +85,7 @@ const ServiceAdd = () => {
                   id='min_price'
                   name='Price'
                   type='number'
+                  required
                   className='block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring'
                 />
               </div>
@@ -92,6 +98,7 @@ const ServiceAdd = () => {
                   id='max_price'
                   name='imgURL'
                   type='text'
+                  required
                   className='block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring'
                 />
               </div>
@@ -104,6 +111,7 @@ const ServiceAdd = () => {
                 className='block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring'
                 name='description'
                 id='description'
+                required
               ></textarea>
             </div>
             <div className='flex justify-end mt-6'>

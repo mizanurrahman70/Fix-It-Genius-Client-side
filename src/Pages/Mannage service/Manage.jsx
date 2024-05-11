@@ -3,6 +3,7 @@ import useAuth from "../../Custom Hooks/useAuth";
 import axios from "axios";
 import ManageRow from "./ManageRow";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const Manage = () => {
     const {user}=useAuth()
@@ -57,6 +58,9 @@ const Manage = () => {
    
   return (
     <div className="overflow-x-auto">
+       <Helmet>
+        <title>Manege Service</title>
+      </Helmet>
       <table className="table">
         {/* head */}
         <thead>

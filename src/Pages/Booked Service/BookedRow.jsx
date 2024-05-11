@@ -1,7 +1,7 @@
 import React from "react";
 
 const BookedRow = ({ bookedData }) => {
-  console.log(bookedData);
+  
   const {
     serviceName,
     price,

@@ -1,11 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../../assets/logo/rsz_fixitgenies.png'
+
 
 const Footer = () => {
     return (
       <footer className="footer p-10 bg-base-200 text-base-content mt-5">
   <aside>
-    
+  
     <p> <Link to='/' className="btn btn-ghost text-xl">Fix<span className='text-2xl font-semibold text-green-500'>it</span>Genius</Link>.<br/> Providing reliable tech since 1992</p>
   </aside> 
   <nav>

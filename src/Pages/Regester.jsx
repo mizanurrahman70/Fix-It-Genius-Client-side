@@ -7,6 +7,7 @@ import { BiShow } from "react-icons/bi";
 
 import { GoEyeClosed } from "react-icons/go";
 import { AuthContext } from "../Authintication/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 const Regester = () => {
   const { userSinup, setUserInfo, gooogleSingUp } = useContext(AuthContext);
@@ -68,6 +69,9 @@ const Regester = () => {
 
   return (
     <div className="w-full mx-auto lg:w-[500px] drop-shadow-lg bg-white">
+       <Helmet>
+        <title>Regester</title>
+      </Helmet>
       <form onSubmit={sinUpHandle} className="p-12">
         <h1 className="backdrop-blur-sm text-4xl pb-8">SingUp</h1>
 

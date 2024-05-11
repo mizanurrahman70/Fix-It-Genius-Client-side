@@ -1,9 +1,26 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Authintication/AuthProvider";
 
 const Navber = () => {
   const { user, logOut } = useContext(AuthContext);
+  const [theme,setTheme]=useState('light')
+  const themeHandle=e=>{
+    if(e.target.checked){
+      setTheme('dark')
+
+    }
+   else{
+    setTheme('light')
+   }
+  }
+  useEffect(()=>{
+    localStorage.setItem('theme',theme)
+    const themeLoacal=localStorage.getItem('theme')
+    document.querySelector('html').setAttribute('data-theme',themeLoacal)
+
+
+  },[theme])
 
   const logOutHandle = () => {
     logOut()
@@ -74,7 +91,14 @@ const Navber = () => {
       <div className="navbar-end hidden lg:flex">
         <ul className="menu menu-horizontal px-1 space-x-5">{item}</ul>
       </div>
-      <div className="navbar-end">
+     
+      <div className="navbar-end ">
+         {/* them control  */}
+         <label onClick={themeHandle} htmlFor="BasicSwitch_NavigateUI" className="mr-5 relative flex h-fit w-10 items-center rounded-full border border-sky-600">
+        <input type="checkbox" className="peer/toggle hidden" id="BasicSwitch_NavigateUI" />
+        <div className="absolute inset-0 z-10 w-0 rounded-full duration-200 peer-checked/toggle:w-full peer-checked/toggle:bg-sky-200"></div>
+        <div className="z-20 size-4 rounded-full bg-sky-500 duration-200 peer-checked/toggle:translate-x-6"></div>
+      </label>
         {user ? (
           <div className="flex  items-center">
             <div role="button" className="btn btn-ghost btn-circle">
