@@ -9,6 +9,24 @@ const ServiceToDo = () => {
     const {user}=useAuth()
    const email =user?.email
    const [toDo,setTodo]=useState([])
+//    const [status,setState]=useState()
+//    const [stateId,setStateId]=useState()
+
+   const updateState=(status,_id)=>{
+//     console.log(_id)
+//     console.log(e)
+//    setState(e)
+//    setStateId(_id)
+   axios.put(`http://localhost:5000/update_status/${_id}`,{status})
+   .then(res=>{
+       console.log(res.data)
+   })
+   }
+  
+    
+    
+   
+
    useEffect(()=>{
     axios.get(`http://localhost:5000/service_to_do?email=${email}`)
     .then(res=>{
@@ -16,9 +34,10 @@ const ServiceToDo = () => {
         setTodo(res.data)
     })
 
-   },[])
+   },[email])
+   
     return (
-        <div className="overflow-x-auto">
+        <div className="">
        <Helmet>
         <title>Service To Do</title>
       </Helmet>
@@ -43,7 +62,7 @@ const ServiceToDo = () => {
           
         
          {
-            toDo.map((td)=><ServiceTodoRow key={td._id} todo={td}></ServiceTodoRow>)
+                toDo.map((td)=><ServiceTodoRow key={td._id}  todo={td} updateState={updateState}></ServiceTodoRow>)
          }
           
         </tbody>

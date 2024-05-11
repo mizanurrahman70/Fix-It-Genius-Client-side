@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 
-const ServiceTodoRow = ({ todo }) => {
-  console.log(todo);
+const ServiceTodoRow = ({ todo, updateState }) => {
+  
   const {
     serviceId,
     serviceImage,
@@ -9,7 +9,13 @@ const ServiceTodoRow = ({ todo }) => {
     serviceDate,
     userName,
     userEMail,
+    _id,
+
+    status,
   } = todo;
+  
+  
+
   return (
     <tr>
       <th>{serviceId}</th>
@@ -29,7 +35,17 @@ const ServiceTodoRow = ({ todo }) => {
       <td>{serviceName}</td>
       <td>{serviceDate}</td>
       <th>
-        <button className="btn btn-ghost btn-xs">details</button>
+        <details className="dropdown">
+          <summary className="m-1 btn">{status}</summary>
+          <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+            <li onClick={()=>updateState('Working',_id)} >
+              <a>Working</a>
+            </li>
+            <li onClick={()=>updateState("Confirmed",_id)}>
+              <a >Confirm</a>
+            </li>
+          </ul>
+        </details>
       </th>
     </tr>
   );
