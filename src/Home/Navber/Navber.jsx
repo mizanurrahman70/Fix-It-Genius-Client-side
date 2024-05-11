@@ -32,9 +32,9 @@ const Navber = () => {
       <li>
         <NavLink to="">Home</NavLink>
       </li>
-      <li>
+      {/* <li>
         <NavLink to="">Services </NavLink>
-      </li>
+      </li> */}
       {user && <li>
         <details>
           <summary>Dashboard</summary>

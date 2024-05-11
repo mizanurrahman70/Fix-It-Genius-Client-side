@@ -4,6 +4,7 @@ import axios from "axios";
 import ManageRow from "./ManageRow";
 import Swal from "sweetalert2";
 import { Helmet } from "react-helmet-async";
+import nodata from '../../assets/logo/nodata.jpg'
 
 const Manage = () => {
     const {user}=useAuth()
@@ -38,16 +39,6 @@ const Manage = () => {
     });
    }
 
-
-
-
-
-
-
-
-
-
-  
     useEffect(()=>{
       const data= async()=>{
         const res=await axios.get(`http://localhost:5000/booking?email=${email}`)
@@ -55,6 +46,12 @@ const Manage = () => {
       }
       data()
     },[email])
+    if(manageData.length == 0){
+      return <>
+      <img src={nodata} alt="" className="text-center mx-auto " />
+      </>
+    }
+
    
   return (
     <div className="overflow-x-auto">
@@ -66,9 +63,7 @@ const Manage = () => {
         <thead>
           <tr>
             <th>
-              <label>
-                <input type="checkbox" className="checkbox" />
-              </label>
+             Delete
             </th>
             <th>Name</th>
             <th>Job Title</th>

@@ -3,23 +3,30 @@ import { Helmet } from 'react-helmet-async';
 import useAuth from '../../Custom Hooks/useAuth';
 import axios from 'axios';
 import ServiceTodoRow from './ServiceTodoRow';
+import Swal from 'sweetalert2';
 
 
 const ServiceToDo = () => {
     const {user}=useAuth()
    const email =user?.email
    const [toDo,setTodo]=useState([])
-//    const [status,setState]=useState()
-//    const [stateId,setStateId]=useState()
+
 
    const updateState=(status,_id)=>{
-//     console.log(_id)
-//     console.log(e)
-//    setState(e)
-//    setStateId(_id)
+
    axios.put(`http://localhost:5000/update_status/${_id}`,{status})
    .then(res=>{
-       console.log(res.data)
+       
+       if(res.data.modifiedCount > 0){
+        Swal.fire({
+          position: "top-center",
+          icon: "success",
+          title: "Statues update Confirmed",
+          showConfirmButton: false,
+          timer: 1500
+        });
+        location.reload()
+       }
    })
    }
   
@@ -30,11 +37,16 @@ const ServiceToDo = () => {
    useEffect(()=>{
     axios.get(`http://localhost:5000/service_to_do?email=${email}`)
     .then(res=>{
-        console.log(res.data)
+    
         setTodo(res.data)
     })
 
    },[email])
+   if(toDo.length == 0){
+    return <>
+    <img src={nodata} alt="" className="text-center mx-auto " />
+    </>
+  }
    
     return (
         <div className="">

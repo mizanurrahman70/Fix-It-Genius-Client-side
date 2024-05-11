@@ -16,7 +16,11 @@ const BookedService = () => {
         }
         data()
       },[email])
-     
+      if(bookedData.length == 0){
+        return <>
+        <img src={nodata} alt="" className="text-center mx-auto " />
+        </>
+      }
     return (
         <div className="overflow-x-auto">
            <Helmet>
