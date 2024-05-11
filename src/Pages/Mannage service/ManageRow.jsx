@@ -9,7 +9,7 @@ const ManageRow = ({manageRow,deleteHandle}) => {
     return (
         <tr>
             <th>
-              <button onClick={()=>deleteHandle(_id)} className="btn btn-circle btn-outline">
+              <button onClick={()=>deleteHandle(_id)} className="btn  btn-circle btn-outline">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-6 w-6"

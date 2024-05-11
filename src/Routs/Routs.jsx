@@ -10,6 +10,7 @@ import Submiton from "../Pages/Submiton/Submiton";
 import Manage from "../Pages/Mannage service/Manage";
 import ServiceUpdate from "../Pages/Service Add/Service Update/ServiceUpdate";
 import BookedService from "../Pages/Booked Service/BookedService";
+import ServiceToDo from "../Pages/Service To Do/ServiceToDo";
   const router = createBrowserRouter([
     {
       path: "/",
@@ -63,6 +64,11 @@ import BookedService from "../Pages/Booked Service/BookedService";
         {
             path:'/booked_serviced',
             element:<BookedService></BookedService>,
+           
+          },
+        {
+            path:'/service_to_do',
+            element:<ServiceToDo></ServiceToDo>,
            
           },
       ])

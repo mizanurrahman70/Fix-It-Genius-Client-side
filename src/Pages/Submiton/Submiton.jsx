@@ -3,6 +3,7 @@ import { useLoaderData } from 'react-router-dom';
 import useAuth from '../../Custom Hooks/useAuth';
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import Swal from 'sweetalert2';
 
 const Submiton = () => {
     const loaderData=useLoaderData()
@@ -33,7 +34,13 @@ const Submiton = () => {
            .then(res=>{
            
             if(res.data.acknowledged){
-                toast.success('Booking Confirm')
+              Swal.fire({
+                position: "top-center",
+                icon: "success",
+                title: "Confirm Your boking",
+                showConfirmButton: false,
+                timer: 1500
+              });
                 form.reset()
             }
            })

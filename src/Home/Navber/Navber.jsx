@@ -49,7 +49,7 @@ const Navber = () => {
               <Link to="/booked_serviced">Booked-Services</Link>
             </li>
             <li>
-              <Link to="/">Service-To-Do</Link>
+              <Link to="service_to_do">Service-To-Do</Link>
             </li>
           </ul>
         </details>
@@ -84,7 +84,7 @@ const Navber = () => {
           </ul>
         </div>
         <Link to="/" className="btn btn-ghost text-xl">
-          Fix<span className="text-2xl font-semibold text-green-500">it</span>
+          Fix<span className="text-2xl font-semibold text-green-500">IT</span>
           Genius
         </Link>
       </div>
