@@ -4,6 +4,8 @@ import { AuthContext } from "../../Authintication/AuthProvider";
 
 const Navber = () => {
   const { user, logOut } = useContext(AuthContext);
+  const [activeClass,setActiveClass]=useState()
+ 
   
   const [theme,setTheme]=useState('light')
   const themeHandle=e=>{
@@ -40,16 +42,16 @@ const Navber = () => {
         <details>
           <summary>Dashboard</summary>
           <ul class="p-2 z-[1]">
-            <li>
+            <li onClick={()=>setActiveClass(1)} className={`${activeClass===1?'bg-green-400 rounded-2xl':''}`}>
               <Link to="/add_service">Add Service</Link>
             </li>
-            <li>
+            <li onClick={()=>setActiveClass(2)} className={`${activeClass===2?'bg-green-400 rounded-2xl':''}`}>
               <Link to="/manage_service">Manage Service</Link>
             </li>
-            <li>
+            <li onClick={()=>setActiveClass(3)} className={`${activeClass===3?'bg-green-400 rounded-2xl':''}`} >
               <Link to="/booked_serviced">Booked-Services</Link>
             </li>
-            <li>
+            <li onClick={()=>setActiveClass(4)} className={`${activeClass===4?'bg-green-400 rounded-2xl':''}`}>
               <Link to="service_to_do">Service-To-Do</Link>
             </li>
           </ul>

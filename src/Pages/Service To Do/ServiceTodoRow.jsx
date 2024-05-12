@@ -17,7 +17,7 @@ const ServiceTodoRow = ({ todo, updateState }) => {
 
     status,
   } = todo;
-  console.log(todo)
+ 
   
 
   return (
