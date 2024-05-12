@@ -39,7 +39,7 @@ const Login = () => {
       })
       .catch((error) => {
         toast.error(error.message.slice(9));
-        // setError(error.message)
+       
       });
   };
   // google singup

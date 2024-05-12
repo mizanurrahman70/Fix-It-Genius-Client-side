@@ -2,7 +2,7 @@
 import React, {createContext, useEffect, useState } from 'react';
 
 import {onAuthStateChanged, GoogleAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth';
-import { ToastContainer, toast } from 'react-toastify';
+
 import 'react-toastify/dist/ReactToastify.css';
 import auth from './fire-base-confiq';
 import axios from 'axios';
@@ -70,9 +70,7 @@ useEffect(()=>{
         photoURL: imgurl
     })
     .then(() => {
-        <ToastContainer />
    
-    toast.success("Profile updated successfully")
     
        
     })

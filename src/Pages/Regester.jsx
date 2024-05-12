@@ -60,13 +60,15 @@ const Regester = () => {
         setUserInfo(name, imgurl)
           .then((result) => {
             toast.success("Accout create seceefull");
-            // alert ("Accout create seceefull")
+            setTimeout(() => {
+              Navigate("/login");
+            }, "1000");
           })
           .catch((error) => console.log(error));
       })
       .catch((error) => console.log(error));
   };
-
+  
   return (
     <div className="w-full mx-auto lg:w-[500px] drop-shadow-lg bg-white">
        <Helmet>

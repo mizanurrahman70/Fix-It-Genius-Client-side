@@ -4,6 +4,7 @@ import { AuthContext } from "../../Authintication/AuthProvider";
 
 const Navber = () => {
   const { user, logOut } = useContext(AuthContext);
+  
   const [theme,setTheme]=useState('light')
   const themeHandle=e=>{
     if(e.target.checked){
