@@ -10,10 +10,14 @@ const ServiceTodoRow = ({ todo, updateState }) => {
     userName,
     userEMail,
     _id,
+    providerEmail,
+    providerName,
+
+
 
     status,
   } = todo;
-  
+  console.log(todo)
   
 
   return (
@@ -27,8 +31,8 @@ const ServiceTodoRow = ({ todo, updateState }) => {
             </div>
           </div>
           <div>
-            <div className="font-bold">{userName}</div>
-            <div className="text-sm opacity-50">{userEMail}</div>
+            <div className="font-bold">{providerName}</div>
+            <div className="text-sm opacity-50">{providerEmail}</div>
           </div>
         </div>
       </td>

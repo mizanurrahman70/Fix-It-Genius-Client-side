@@ -62,7 +62,7 @@ const ServiceToDo = () => {
             serviceId
 
             </th>
-            <th>Name</th>
+            <th>Provider Info</th>
             <th>Job Title</th>
             <th>Date</th>
             <th>Statues</th>
