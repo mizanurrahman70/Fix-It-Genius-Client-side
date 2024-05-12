@@ -119,7 +119,7 @@ const Navber = () => {
             <div>
               <button
                 onClick={logOutHandle}
-                className="md:ml-4 bg-[#328EFF] p-2 rounded-2xl"
+                className="md:ml-4 bg-green-400 p-2 rounded-2xl"
               >
                 Log Out
               </button>

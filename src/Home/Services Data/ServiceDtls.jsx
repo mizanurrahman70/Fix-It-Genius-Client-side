@@ -15,8 +15,8 @@ const ServiceDtls = () => {
       </Helmet>
       <div className='flex-1  px-4 py-7 bg-white rounded-md shadow-md md:min-h-[350px]'>
         <div className='flex items-center justify-between'>
-          <span className='text-sm font-light text-gray-800 '>
-            Deadline: 12/08/2024
+          <span className='text-sm font-light text-gray-800 p-1  bg-green-400 rounded-full '>
+            Deadline: {`${new Date().getDate().toString().padStart(2, '0')}/${(new Date().getMonth() + 1).toString().padStart(2, '0')}/${new Date().getFullYear()}`}
           </span>
           <span className='px-4 py-1 text-xs text-blue-800 uppercase bg-blue-200 rounded-full '>
            Repair Services

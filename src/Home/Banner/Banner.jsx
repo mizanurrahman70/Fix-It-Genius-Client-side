@@ -20,7 +20,7 @@ const Banner = () => {
               At Computer Service Hub, we are your trusted partners in ensuring
               seamless computing experiences.{" "}
             </p>
-            <button className="btn btn-outline btn-warning w-56">
+            <button className="btn btn-outline btn-warning  w-56">
              <Link to='/all_services'>Services</Link>
             </button>
           </div>
