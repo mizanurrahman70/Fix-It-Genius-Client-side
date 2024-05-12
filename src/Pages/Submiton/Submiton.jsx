@@ -30,7 +30,7 @@ const Submiton = () => {
         const bookingData={serviceId, serviceName, serviceImage , providerEmail, providerName, price,
             userEMail, userName , serviceDate, instructions,status
             }
-           axios.post('http://localhost:5000/booking',bookingData)
+           axios.post('https://fix-it-genius-server-side.vercel.app/booking',bookingData)
            .then(res=>{
            
             if(res.data.acknowledged){

@@ -51,14 +51,14 @@ useEffect(()=>{
          setUser(carrenUser)  
         //  user use token 
         if(carrenUser){
-            axios.post(`http://localhost:5000/jwt`,loggingUser,{withCredentials:true})
+            axios.post(`https://fix-it-genius-server-side.vercel.app/jwt`,loggingUser,{withCredentials:true})
             .then(res=>{
                 console.log(res.data)
             })
             
         }  
         else{
-            axios.post(`http://localhost:5000/tokenout`,loggingUser,{withCredentials:true})
+            axios.post(`https://fix-it-genius-server-side.vercel.app/tokenout`,loggingUser,{withCredentials:true})
             .then(res=>{
                 console.log(res.data)
             })

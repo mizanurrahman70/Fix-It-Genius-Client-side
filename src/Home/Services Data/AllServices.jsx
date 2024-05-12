@@ -22,7 +22,7 @@ const AllServices = () => {
         if(quary.trim()===''){
             return
         }
-        axios.get(`http://localhost:5000/searching?search=${quary}`)
+        axios.get(`https://fix-it-genius-server-side.vercel.app/searching?search=${quary}`)
         .then(res=>{
             console.log(res.data)
             setAllData(res.data)
@@ -34,7 +34,7 @@ const AllServices = () => {
             return
            
         }
-        axios.get(`http://localhost:5000/searching?search=${quary}`)
+        axios.get(`https://fix-it-genius-server-side.vercel.app/searching?search=${quary}`)
         .then(res=>{
             console.log(res.data)
             setAllData(res.data)
@@ -42,7 +42,7 @@ const AllServices = () => {
 
 
     }
- console.log(quary)
+//  console.log(quary)
     return (
        <>
        <div>

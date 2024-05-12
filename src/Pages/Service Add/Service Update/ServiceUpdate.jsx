@@ -6,7 +6,7 @@ import Swal from 'sweetalert2';
 
 const ServiceUpdate = () => {
     const loaderData=useLoaderData()
-    console.log(loaderData)
+    // console.log(loaderData)
    const {serviceName,serviceArea,Price,imgURL,description,providerEmail,providerImage,providerName,_id}=loaderData
     const submitHandle=(e)=>{
         e.preventDefault()
@@ -19,7 +19,7 @@ const ServiceUpdate = () => {
         const description=form.description.value
         
         const addService={serviceName,serviceArea,Price,imgURL,description}
-        axios.put(`http://localhost:5000/update/${_id}`,addService)
+        axios.put(`https://fix-it-genius-server-side.vercel.app/update/${_id}`,addService)
         .then(res=>{
           if(res.data.modifiedCount > 0){
             

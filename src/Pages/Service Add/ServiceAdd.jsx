@@ -23,7 +23,7 @@ const ServiceAdd = () => {
         const providerName=user?.displayName
         const addService={serviceName,serviceArea,Price,imgURL,description,providerEmail,providerImage,providerName}
         
-        axios.post('http://localhost:5000/servics',addService)
+        axios.post('https://fix-it-genius-server-side.vercel.app/servics',addService)
         .then(res=>{
             console.log(res.data)
             if(res.data.acknowledged){

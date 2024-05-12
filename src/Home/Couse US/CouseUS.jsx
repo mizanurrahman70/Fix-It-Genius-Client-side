@@ -3,14 +3,14 @@ import React from "react";
 const CouseUS = () => {
   return (
     <div>
-      <div className="mt-5 mb-5">
+      <div data-aos="fade-down-left" className="mt-5 mb-5">
         <h1 className="text-4xl font-semibold text-center">Why Choose Us?</h1>
         <p className="text-center mt-5 mb-5"> Look no further! We offer top-notch electronic item repair <br /> services that are fast. Here's why you should <br /> choose us for all your electronic repair needs</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {/* card one 1 */}
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div data-aos="zoom-in" className="card w-96 bg-base-100 shadow-xl">
           <figure className="px-10 pt-10">
             <img
               src="https://i.ibb.co/XChWCDd/chooseus1-7790b366.png"
@@ -27,7 +27,7 @@ const CouseUS = () => {
           </div>
         </div>
         {/* card one 2 */}
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div data-aos="zoom-in" className="card w-96 bg-base-100 shadow-xl">
           <figure className="px-10 pt-10">
             <img
               src="https://i.ibb.co/0rdzb2Z/chooseus2-fbadfe4b.png"
@@ -43,7 +43,7 @@ const CouseUS = () => {
           </div>
         </div>
         {/* card one 3 */}
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div data-aos="zoom-in" className="card w-96 bg-base-100 shadow-xl">
           <figure className="px-10 pt-10">
             <img
               src="https://i.ibb.co/qdqLjf8/chooseus3-faf69afc.png"
@@ -59,7 +59,7 @@ const CouseUS = () => {
           </div>
         </div>
         {/* card one 4 */}
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div data-aos="zoom-in" className="card w-96 bg-base-100 shadow-xl">
           <figure className="px-10 pt-10">
             <img
               src="https://i.ibb.co/2WM3Rrn/chooseus4-5d41f4e5.png"
@@ -75,7 +75,7 @@ const CouseUS = () => {
           </div>
         </div>
         {/* card one 5  */}
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div data-aos="zoom-in" className="card w-96 bg-base-100 shadow-xl">
           <figure className="px-10 pt-10">
             <img
               src="https://i.ibb.co/GvDZqgZ/chooseus5-fb22454f.png"
@@ -91,7 +91,7 @@ const CouseUS = () => {
           </div>
         </div>
         {/* card one  6 */}
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div data-aos="zoom-in" className="card w-96 bg-base-100 shadow-xl">
           <figure className="px-10 pt-10">
             <img
               src="https://i.ibb.co/S7wwt8f/ewaste-97c7da8d.png"

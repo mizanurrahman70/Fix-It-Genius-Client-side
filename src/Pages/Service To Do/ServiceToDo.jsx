@@ -15,7 +15,7 @@ const ServiceToDo = () => {
 
    const updateState=(status,_id)=>{
 
-   axios.put(`http://localhost:5000/update_status/${_id}`,{status})
+   axios.put(`https://fix-it-genius-server-side.vercel.app/update_status/${_id}`,{status})
    .then(res=>{
        
        if(res.data.modifiedCount > 0){
@@ -36,7 +36,7 @@ const ServiceToDo = () => {
    
 
    useEffect(()=>{
-    axios.get(`http://localhost:5000/service_to_do?email=${email}`)
+    axios.get(`https://fix-it-genius-server-side.vercel.app/service_to_do?email=${email}`)
     .then(res=>{
     
         setTodo(res.data)

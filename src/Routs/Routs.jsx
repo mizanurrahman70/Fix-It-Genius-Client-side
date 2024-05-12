@@ -37,19 +37,19 @@ import PrivetRout from "../Authintication/PrivetRoute";
         {
             path:'/services/:id',
             element:<PrivetRout><ServiceDtls></ServiceDtls></PrivetRout>,
-            loader:({params})=>fetch(`http://localhost:5000/services/${params.id}`)
+            loader:({params})=>fetch(`https://fix-it-genius-server-side.vercel.app/services/${params.id}`)
             
         },
         {
             path:'/all_services',
             element:<AllServices></AllServices>,
-            loader:()=>fetch(`http://localhost:5000/services`)
+            loader:()=>fetch(`https://fix-it-genius-server-side.vercel.app/services`)
             
         },
         {
             path:'/submition/:id',
             element:<PrivetRout><Submiton></Submiton></PrivetRout>,
-            loader:({params})=>fetch(`http://localhost:5000/services/${params.id}`)
+            loader:({params})=>fetch(`https://fix-it-genius-server-side.vercel.app/services/${params.id}`)
             
             
         },
@@ -60,7 +60,7 @@ import PrivetRout from "../Authintication/PrivetRoute";
         {
             path:'/Update_service/:id',
             element:<PrivetRout><ServiceUpdate></ServiceUpdate></PrivetRout>,
-            loader:({params})=>fetch(`http://localhost:5000/services/${params.id}`)
+            loader:({params})=>fetch(`https://fix-it-genius-server-side.vercel.app/services/${params.id}`)
           },
         {
             path:'/booked_serviced',

@@ -12,7 +12,7 @@ const Manage = () => {
     const [manageData,setManageData]=useState([])
    
    const deleteHandle=(_id)=>{
-    console.log(_id)
+    // console.log(_id)
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -25,7 +25,7 @@ const Manage = () => {
      
       if (result.isConfirmed) {
     
-        axios.delete(`http://localhost:5000/booking/${_id}`).then((res) => {
+        axios.delete(`https://fix-it-genius-server-side.vercel.app/booking/${_id}`).then((res) => {
           console.log(res.data);
           if (res.data.deletedCount > 0) {
         
@@ -41,7 +41,7 @@ const Manage = () => {
 
     useEffect(()=>{
       const data= async()=>{
-        const res=await axios.get(`http://localhost:5000/booking?email=${email}`)
+        const res=await axios.get(`https://fix-it-genius-server-side.vercel.app/booking?email=${email}`)
         setManageData(res.data)
       }
       data()

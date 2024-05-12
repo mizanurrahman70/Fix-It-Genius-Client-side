@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const Services = () => {
     const[services,setServices]=useState()
     const[loader,SetLoader]=useState(true)
-    // axios.get('http://localhost:5000/services')
+    // axios.get('https://fix-it-genius-server-side.vercel.app/services')
     // .then(res=>{
     //     console.log(res.data)
     //     setServices(res.data)
@@ -14,7 +14,7 @@ const Services = () => {
     useEffect(() => {
         const fetchData = async () => {
           try {
-            const response = await axios.get('http://localhost:5000/services');
+            const response = await axios.get('https://fix-it-genius-server-side.vercel.app/services');
             setServices(response.data.slice(0,6));
             SetLoader(false);
           } catch (error) {
