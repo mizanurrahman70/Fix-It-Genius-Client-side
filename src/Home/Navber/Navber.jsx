@@ -32,7 +32,9 @@ const Navber = () => {
       <li>
         <NavLink to="">Home</NavLink>
       </li>
-   
+      {/* <li>
+        <NavLink to="">Services </NavLink>
+      </li> */}
       {user && <li>
         <details>
           <summary>Dashboard</summary>
@@ -52,13 +54,6 @@ const Navber = () => {
           </ul>
         </details>
       </li>}
-      <li>
-      <label onClick={themeHandle} htmlFor="BasicSwitch_NavigateUI" className="mr-5 relative flex h-fit w-10 items-center rounded-full border border-sky-600">
-        <input type="checkbox" className="peer/toggle hidden" id="BasicSwitch_NavigateUI" />
-        <div className="absolute inset-0 z-10 w-0 rounded-full duration-200 peer-checked/toggle:w-full peer-checked/toggle:bg-sky-200"></div>
-        <div className="z-20 size-4 rounded-full bg-sky-500 duration-200 peer-checked/toggle:translate-x-6"></div>
-      </label>
-      </li>
     </>
   );
   return (
@@ -99,7 +94,11 @@ const Navber = () => {
      
       <div className="navbar-end ">
          {/* them control  */}
-      
+         <label onClick={themeHandle} htmlFor="BasicSwitch_NavigateUI" className="mr-5 relative flex h-fit w-10 items-center rounded-full border border-sky-600">
+        <input type="checkbox" className="peer/toggle hidden" id="BasicSwitch_NavigateUI" />
+        <div className="absolute inset-0 z-10 w-0 rounded-full duration-200 peer-checked/toggle:w-full peer-checked/toggle:bg-sky-200"></div>
+        <div className="z-20 size-4 rounded-full bg-sky-500 duration-200 peer-checked/toggle:translate-x-6"></div>
+      </label>
         {user ? (
           <div className="flex  items-center">
             <div role="button" className="btn btn-ghost btn-circle">
@@ -124,7 +123,7 @@ const Navber = () => {
             </div>
           </div>
         ) : (
-          <button className=" lg:ml-4 bg-green-400 h-[50px] w-[70px] rounded-md">
+          <button className="ml-10 lg:ml-4 bg-green-400 h-[50px] w-[70px] rounded-md">
             <NavLink to="/login">Login</NavLink>
           </button>
         )}

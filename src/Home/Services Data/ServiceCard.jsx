@@ -1,5 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 
 const ServiceCard = ({services}) => {
    
@@ -8,7 +12,7 @@ const ServiceCard = ({services}) => {
   
     return (
         <>
-        <div className="card card-compact w-96 bg-base-100 shadow-xl">
+        <div  data-aos="zoom-in-up" className="card card-compact w-96 bg-base-100 shadow-xl">
   <figure><img src={imgURL} alt="Shoes"  className='h-52'/></figure>
   <div className="card-body text-start">
     <h2 className=" text-center text-[#282828] font-semibold text-2xl"><span>{serviceName}</span></h2>

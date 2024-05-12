@@ -5,6 +5,7 @@ import CouseUS from "./Couse US/CouseUS";
 import Banifit from "./Banifits/Banifit";
 import Team from "./Our Team/Team";
 import { Helmet } from "react-helmet-async";
+import Faq from "./FAQ  section/Faq";
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <CouseUS></CouseUS>
       <Banifit></Banifit>
       <Team></Team>
+      <Faq></Faq>
     </div>
   );
 };
