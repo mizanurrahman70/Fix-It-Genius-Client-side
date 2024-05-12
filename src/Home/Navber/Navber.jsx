@@ -33,10 +33,10 @@ const Navber = () => {
   const item = (
     <>
       <li>
-        <NavLink style={({isActive})=>isActive?{backgroundColor:'green',font:'bold'}:{}} to="">Home</NavLink>
+        <NavLink style={({isActive})=>isActive?{backgroundColor:'green',font:'bold'}:{border:'1px solid green'}} to="">Home</NavLink>
       </li>
       <li>
-        <NavLink style={({isActive})=>isActive?{backgroundColor:'green',font:'bold'}:{}} to="/all_services">Services </NavLink>
+        <NavLink style={({isActive})=>isActive?{backgroundColor:'green',font:'bold'}:{border:'1px solid green'}} to="/all_services">Services </NavLink>
       </li>
       {user && <li>
         <details>
