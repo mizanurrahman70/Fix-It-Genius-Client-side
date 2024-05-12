@@ -5,6 +5,7 @@ import {onAuthStateChanged, GoogleAuthProvider, GithubAuthProvider, createUserWi
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import auth from './fire-base-confiq';
+import axios from 'axios';
 export const AuthContext=createContext(null)
 const AuthProvider = ({children}) => {
     const [user,setUser]=useState({})
@@ -44,8 +45,24 @@ const Gitsignin=()=>{
 
 useEffect(()=>{
     const unsubsribe= onAuthStateChanged(auth,(carrenUser)=>{
+        const userEmail=carrenUser?.email 
+        const loggingUser={email:userEmail}
         setLoading(false)
-         setUser(carrenUser)    
+         setUser(carrenUser)  
+        //  user use token 
+        if(carrenUser){
+            axios.post(`http://localhost:5000/jwt`,loggingUser,{withCredentials:true})
+            .then(res=>{
+                console.log(res.data)
+            })
+            
+        }  
+        else{
+            axios.post(`http://localhost:5000/tokenout`,loggingUser,{withCredentials:true})
+            .then(res=>{
+                console.log(res.data)
+            })
+        }
          })
      return ()=>{
          unsubsribe()
