@@ -42,7 +42,11 @@ const Manage = () => {
     useEffect(()=>{
       const data= async()=>{
         const res=await axios.get(`https://fix-it-genius-server-side.vercel.app/booking?email=${email}`)
-        setManageData(res.data)
+        
+         
+          setManageData(res.data)
+     
+        
       }
       data()
     },[email])

@@ -12,6 +12,7 @@ import ServiceUpdate from "../Pages/Service Add/Service Update/ServiceUpdate";
 import BookedService from "../Pages/Booked Service/BookedService";
 import ServiceToDo from "../Pages/Service To Do/ServiceToDo";
 import PrivetRout from "../Authintication/PrivetRoute";
+import Error from "../Components/Error";
   const router = createBrowserRouter([
     {
       path: "/",

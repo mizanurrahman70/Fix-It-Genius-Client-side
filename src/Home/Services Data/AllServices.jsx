@@ -46,7 +46,7 @@ const AllServices = () => {
     return (
        <>
        <div>
-       <div className="min-h-[400px] sm:px-2 px-3 mx-3 max-h-[600px] py-20 rounded-2xl bg-[#2A3342]">
+       <div className="min-h-[400px] sm:px-2 px-3 mx-3 max-h-[600px] py-20 rounded-2xl bg-[#6e7b72]">
    <div className="flex justify-center flex-col">
    {/* Beautiful announcement line */}
      <div className="bg-[#1F2937] mx-auto max-w-[250px] pr-3 pl-1 py-[6px]  rounded-full gap-2 flex  items-center text-white">
