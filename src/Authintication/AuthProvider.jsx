@@ -1,7 +1,7 @@
 
 import React, {createContext, useEffect, useState } from 'react';
 
-import {onAuthStateChanged, GoogleAuthProvider, GithubAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth';
+import {onAuthStateChanged, GoogleAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import auth from './fire-base-confiq';
@@ -34,13 +34,7 @@ const logOut =()=>{
     setLoading(true)
   return  signOut(auth)
 }
-// git guh ahithintication
-const Gitprovider = new GithubAuthProvider();
-const Gitsignin=()=>{
-    setLoading(true)
-    return signInWithPopup(auth, Gitprovider)
-    
-}
+
 // onOth Change 
 
 useEffect(()=>{
@@ -95,7 +89,7 @@ useEffect(()=>{
         userSinup,
         UserLogin,
         gooogleSingUp,
-        Gitsignin,
+     
         user,
         setUser,
         logOut,
