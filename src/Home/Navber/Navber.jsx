@@ -4,7 +4,7 @@ import { AuthContext } from "../../Authintication/AuthProvider";
 
 const Navber = () => {
   const { user, logOut } = useContext(AuthContext);
-  const [activeClass,setActiveClass]=useState()
+  const [activeClass,setActiveClass]=useState(0)
  
   
   const [theme,setTheme]=useState('light')
@@ -40,7 +40,7 @@ const Navber = () => {
       </li>
       {user && <li>
         <details>
-          <summary>Dashboard</summary>
+          <summary className="border border-green-600">Dashboard</summary>
           <ul class="p-2 z-[1]">
             <li onClick={()=>setActiveClass(1)} className={`${activeClass===1?'bg-green-400 rounded-2xl':''}`}>
               <Link to="/add_service">Add Service</Link>

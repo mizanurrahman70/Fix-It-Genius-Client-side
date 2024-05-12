@@ -2,7 +2,7 @@
 import React from 'react';
 import useAuth from '../../Custom Hooks/useAuth';
 import axios from 'axios';
-import { toast } from 'react-toastify';
+import Swal from "sweetalert2";
 import { Helmet } from 'react-helmet-async';
 
 const ServiceAdd = () => {
@@ -27,7 +27,13 @@ const ServiceAdd = () => {
         .then(res=>{
             console.log(res.data)
             if(res.data.acknowledged){
-                toast.success('Your Data successfully Add')
+              Swal.fire({
+                position: "top-center",
+                icon: "success",
+                title: "Your Service Added",
+                showConfirmButton: false,
+                timer: 1500
+              });
             }
         })
 
