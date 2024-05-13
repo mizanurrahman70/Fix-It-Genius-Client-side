@@ -11,13 +11,15 @@ const AllServices = () => {
 
     const [allData,setAllData]=useState(loaderData)
     const [quary,setQuary]=useState('')
+   
+    
 
-  
+    
     const handleChange=e=>{
         
         setQuary(e.target.value)
     }
-    
+
     useEffect(()=>{
         if(quary.trim()===''){
             return

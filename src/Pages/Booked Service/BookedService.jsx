@@ -12,7 +12,7 @@ const BookedService = () => {
 
     useEffect(()=>{
         const data= async()=>{
-          const res=await axios.get(`https://fix-it-genius-server-side.vercel.app/booked?email=${email}`)
+          const res=await axios.get(`https://fix-it-genius-server-side.vercel.app/booked?email=${email}`,{withCredentials:true})
          useBookedData(res.data)
         }
         data()

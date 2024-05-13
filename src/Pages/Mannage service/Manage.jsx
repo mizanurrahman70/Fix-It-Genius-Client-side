@@ -25,7 +25,7 @@ const Manage = () => {
      
       if (result.isConfirmed) {
     
-        axios.delete(`https://fix-it-genius-server-side.vercel.app/booking/${_id}`).then((res) => {
+        axios.delete(`https://fix-it-genius-server-side.vercel.app/booking/${_id}`,{withCredentials:true}).then((res) => {
           console.log(res.data);
           if (res.data.deletedCount > 0) {
         

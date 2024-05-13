@@ -36,7 +36,7 @@ const ServiceToDo = () => {
    
 
    useEffect(()=>{
-    axios.get(`https://fix-it-genius-server-side.vercel.app/service_to_do?email=${email}`)
+    axios.get(`https://fix-it-genius-server-side.vercel.app/service_to_do?email=${email}`,{withCredentials:true})
     .then(res=>{
     
         setTodo(res.data)
