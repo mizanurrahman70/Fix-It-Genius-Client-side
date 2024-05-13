@@ -11,10 +11,25 @@ const AllServices = () => {
 
     const [allData,setAllData]=useState(loaderData)
     const [quary,setQuary]=useState('')
+   const [countdata,SetCountData]=useState()
+   const itemPage=10
+   const pagesNumber=Math.ceil(countdata / itemPage)
+   console.log(pagesNumber)
+  //  const pages=[...Array((pagesNumber)).keys()]
+  //  console.log(pages)
    
     
 
     
+    useEffect(()=>{
+      axios.get('https://fix-it-genius-server-side.vercel.app/page_count')
+      .then(res=>{
+       const {count} =res.data
+        SetCountData(count)
+     
+      })
+    },[countdata])
+    console.log(countdata)
     const handleChange=e=>{
         
         setQuary(e.target.value)

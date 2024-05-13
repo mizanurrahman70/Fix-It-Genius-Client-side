@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../assets/logo/logo.png'
+import logo from '../../assets/logo/logo-removebg-preview.png'
 import facebook from'../../assets/logo/icons8-facebook-48.png'
 import linkilden from'../../assets/logo/icons8-linkedin-48.png'
 const Footer = () => {

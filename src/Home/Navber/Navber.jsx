@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Authintication/AuthProvider";
+import logo from'../../assets/logo/logo-removebg-preview.png'
 
 const Navber = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -86,10 +87,14 @@ const Navber = () => {
             {item}
           </ul>
         </div>
-        <Link to="/" className="btn btn-ghost  md:text-xl">
+       <div>
+       <img className="w-32 h-20 ml-4" src={logo} alt="" />
+        {/* <p><Link to="/" className="btn btn-ghost  md:text-xl">
           Fix<span className="md:text-2xl font-semibold text-green-500">IT</span>
           Genius
-        </Link>
+        </Link></p> */}
+       </div>
+        
       </div>
       <div className="navbar-end hidden lg:flex">
         <ul className="menu menu-horizontal px-1 space-x-5">{item}</ul>
