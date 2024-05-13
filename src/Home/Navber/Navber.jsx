@@ -88,7 +88,7 @@ const Navber = () => {
           </ul>
         </div>
        <div>
-       <img className="w-32 h-20 ml-4" src={logo} alt="" />
+       <Link to='/'><img className="w-32 h-20 ml-4" src={logo} alt="" /></Link>
         {/* <p><Link to="/" className="btn btn-ghost  md:text-xl">
           Fix<span className="md:text-2xl font-semibold text-green-500">IT</span>
           Genius
