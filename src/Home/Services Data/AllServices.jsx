@@ -62,6 +62,9 @@ const AllServices = () => {
 //  console.log(quary)
     return (
        <>
+          <Helmet>
+        <title>All services</title>
+      </Helmet>
        <div>
        <div className="min-h-[400px] sm:px-2 px-3 mx-3 max-h-[600px] py-20 rounded-2xl bg-[#6e7b72]">
    <div className="flex justify-center flex-col">
