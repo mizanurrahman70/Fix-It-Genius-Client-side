@@ -50,11 +50,11 @@ const ServiceToDo = () => {
   }
    
     return (
-        <div className="overflow-x-auto overflow-y-auto mb-10">
+        <div className="overflow-x-auto overflow-y-auto ">
        <Helmet>
         <title>Service To Do</title>
       </Helmet>
-      <table className="table">
+      <table className="table ">
         {/* head */}
         <thead>
           <tr>
