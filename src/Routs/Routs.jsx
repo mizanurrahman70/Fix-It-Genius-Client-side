@@ -13,6 +13,7 @@ import BookedService from "../Pages/Booked Service/BookedService";
 import ServiceToDo from "../Pages/Service To Do/ServiceToDo";
 import PrivetRout from "../Authintication/PrivetRoute";
 import Error from "../Components/Error";
+import Contact from "../Pages/contact us/Contact";
   const router = createBrowserRouter([
     {
       path: "/",
@@ -71,6 +72,11 @@ import Error from "../Components/Error";
         {
             path:'/service_to_do',
             element:<PrivetRout><ServiceToDo></ServiceToDo></PrivetRout>,
+           
+          },
+        {
+            path:'/contact',
+            element:<Contact></Contact>,
            
           },
       ])

@@ -39,6 +39,7 @@ const Navber = () => {
       <li>
         <NavLink style={({isActive})=>isActive?{backgroundColor:'green',font:'bold'}:{border:'1px solid green'}} to="/all_services">Services </NavLink>
       </li>
+      
       {user && <li>
         <details>
           <summary className="border border-green-600">Dashboard</summary>
@@ -55,9 +56,13 @@ const Navber = () => {
             <li onClick={()=>setActiveClass(4)} className={`${activeClass===4?'bg-green-400 rounded-2xl':''}`}>
               <Link to="service_to_do">Service-To-Do</Link>
             </li>
+           
           </ul>
         </details>
       </li>}
+      <li>
+        <NavLink style={({isActive})=>isActive?{backgroundColor:'green',font:'bold'}:{border:'1px solid green'}} to="/contact">Contact Us </NavLink>
+      </li>
     </>
   );
   return (
