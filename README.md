@@ -18,5 +18,7 @@ her product and .manage service etc.
 
 ##run this projact your own computer
 -git clone
+
 -npm int
+
 -npm run dev
