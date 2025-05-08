@@ -1,9 +1,10 @@
 
 # 💡 Fix It Genius
 
-🔗 **Live Site:** [Live Site](https://eleven-daeee.web.app/)
+🔗 **Live Site:** [Live Site](https://eleven-daeee.web.app/)  
 
-🔗 **Live Site:** [Backend Repo](https://github.com/mizanurrahman70/Fix-It-Genius-server-side))
+🔗 **Backend Repo:** [Server Code](https://github.com/mizanurrahman70/Fix-It-Genius-server-side)
+
 
 ---
 
